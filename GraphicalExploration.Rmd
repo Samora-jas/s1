@@ -17,6 +17,7 @@ rm(list = ls())      # cleans up your R environment
 
 # load packages
 library(mosaic)
+library(DataComputing)
 library(tidyverse)   # loads a group of useful packages including `ggplot2`
 
 
@@ -32,9 +33,11 @@ library(tidyverse)   # loads a group of useful packages including `ggplot2`
 ```{r}
 # read `diamonds` data into R; it has been provided by the `ggplot2` package
 data("diamonds", package = "ggplot2")
+# The "diamonds" data describes the color of the diamonds in the dataset such as E, H, and F. It also describes the price of diamonds.
 
 # add your code below for your one key data visualization
-
+ggplot(data=diamonds,aes(x=cut,y=price ))+geom_bar(stat='identity',position='stack', width=.9)+scale_fill_brewer(type='seq',palette=1) 
+#The better the cut the higher the price is. Ideal diamond is the most expensive.
 
 ```
 
@@ -47,10 +50,12 @@ data("diamonds", package = "ggplot2")
 
 ```{r}
 # read CSV data set into R
-CerealData <- read_csv(file = "cereal.csv")  
+CerealData <- read_csv(file = "cereal.csv") 
+#The data in the Cereal dataset describes the name of each brand of cereal and the number of calories, protein, sodium, etc.
 
 # add your code below for your one key data visualization
-
+ggplot( data = CerealData, aes(x = calories)) + geom_ash(binwidth = 1.5) + aes(colour = calories) + labs(title = "") + theme(legend.position = "right") 
+#The calories of cereal from 80 to 120 have a higher count.
 
 ```
 
@@ -62,4 +67,6 @@ CerealData <- read_csv(file = "cereal.csv")
 
 The helper functions are great, but they produce ugly code.  Clean up the `ggplot2` code that reproduces the required plots so that it aligns with the R Programming Style Guide Appendix in the *DataComputing* eBook <https://dtkaplan.github.io/DataComputingEbook/>.  
 
-
+```{r}
+rm(list = ls())
+```
