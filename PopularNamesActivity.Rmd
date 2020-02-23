@@ -1,0 +1,52 @@
+---
+title: "Activity: Popular Names"
+author: "Your Names Here"
+date: ""
+output: html_notebook
+---
+
+
+
+# Set Up
+
+```{r}
+# load necessary packages
+library(tidyverse)
+library(mosaic)
+library(DataComputing)
+```
+
+
+```{r}
+# Load the BabyNames data into RStudio environment (from DataComputing package)
+data("BabyNames")
+
+```
+
+# Activity
+
+**Goal**: By the end of the activity, each team will create a graph (like Figure A.1 on p 159) showing ups and downs in the popularity of four names (both teammates & two additional names) according to the U.S. social security administration  
+
+
+### Step 1
+
+
+
+### Step 3
+
+
+
+### Step 4
+
+
+
+### Step 5
+
+
+
+### Step 7
+
+
+
+
+
